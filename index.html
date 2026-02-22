@@ -3,209 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor Darlan Alves Cardoso</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxvA5u3uJkmEZT8DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Dark mode */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1f2937;
-                color: #f3f4f6;
-            }
-            .bg-white { background-color: #374151; }
-            .bg-gray-100 { background-color: #4b5563; }
-            .text-gray-900 { color: #f3f4f6; }
-            .text-gray-600 { color: #d1d5db; }
-        }
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <meta name="description" content="Site profissional de Darlan, professor de Ciência da Computação especializado em IA, Robótica e mais.">
+    <meta name="keywords" content="ciência da computação, IA, robótica, ensino, pesquisa">
+    <title>Darlan - Professor de Ciência da Computação</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
 </head>
-<body class="bg-white text-gray-900">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-blue-800 text-white shadow-md z-50">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold">Darlan Alves Cardoso</a>
-            <ul class="flex space-x-6">
-                <li><a href="#home" class="hover:text-cyan-300 transition">Home</a></li>
-                <li><a href="#about" class="hover:text-cyan-300 transition">Sobre Mim</a></li>
-                <li><a href="#areas" class="hover:text-cyan-300 transition">Áreas de Atuação</a></li>
-                <li><a href="#projects" class="hover:text-cyan-300 transition">Projetos e Publicações</a></li>
-                <li><a href="#materials" class="hover:text-cyan-300 transition">Aulas e Materiais</a></li>
-                <li><a href="#contact" class="hover:text-cyan-300 transition">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Home -->
-    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-700 text-white pt-20">
-        <div class="container mx-auto px-4 text-center fade-in">
-            <img src="https://via.placeholder.com/200x200?text=Darlan+Alves+Cardoso" alt="Foto do Professor Darlan Alves Cardoso" class="mx-auto rounded-full w-48 h-48 mb-6 shadow-lg">
-            <h1 class="text-4xl font-bold mb-2">Darlan Alves Cardoso</h1>
-            <p class="text-xl mb-4">Doutor em Computação, Especialista em Inteligência Artificial</p>
-            <p class="text-2xl mb-6">Professor de Computação e Desenvolvedor de Soluções Inteligentes</p>
-            <div class="space-x-4">
-                <a href="#about" class="bg-cyan-500 text-white px-6 py-3 rounded hover:bg-cyan-600 transition">Ver Currículo</a>
-                <a href="#projects" class="bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600 transition">Conhecer Projetos</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4 fade-in">
-            <h2 class="text-3xl font-bold mb-8 text-center">Sobre Mim</h2>
-            <div class="max-w-3xl mx-auto">
-                <h3 class="text-2xl font-semibold mb-4">Formação Acadêmica</h3>
-                <ul class="list-disc pl-6 mb-6">
-                    <li>Graduação em Ciência da Computação - Universidade Federal</li>
-                    <li>Especialização em Inteligência Artificial</li>
-                    <li>Mestrado em Robótica</li>
-                    <li>Doutorado em Computação</li>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Darlan</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Sobre Mim</a></li>
+                    <li><a href="teaching.html">Ensino</a></li>
+                    <li><a href="research.html">Pesquisa</a></li>
+                    <li><a href="projects.html">Projetos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contato</a></li>
                 </ul>
-                <h3 class="text-2xl font-semibold mb-4">Experiência Docente e de Pesquisa</h3>
-                <p class="mb-4">Mais de 10 anos de experiência em ensino superior e pesquisa em áreas de tecnologia.</p>
-                <h3 class="text-2xl font-semibold mb-4">Filosofia de Ensino</h3>
-                <p>Adoto metodologias como aprendizagem baseada em projetos e pensamento computacional para fomentar a inovação.</p>
-            </div>
+                <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+            </nav>
         </div>
-    </section>
-
-    <!-- Areas -->
-    <section id="areas" class="py-20 bg-white">
-        <div class="container mx-auto px-4 fade-in">
-            <h2 class="text-3xl font-bold mb-8 text-center">Áreas de Atuação</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-brain text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Inteligência Artificial</h3>
-                    <p>Desenvolvimento de sistemas inteligentes e machine learning.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-robot text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Robótica Educacional e Industrial</h3>
-                    <p>Aplicações robóticas em educação e indústria.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-database text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Banco de Dados</h3>
-                    <p>Design e gerenciamento de bancos de dados.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-mobile-alt text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Desenvolvimento para Dispositivos Móveis</h3>
-                    <p>Apps para Android e iOS.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-globe text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Desenvolvimento Web</h3>
-                    <p>Sites e aplicações web modernas.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-sitemap text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Estrutura de Dados e Algoritmos</h3>
-                    <p>Fundamentos de programação eficiente.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-server text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Sistemas Operacionais</h3>
-                    <p>Gerenciamento de SOs e kernels.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
-                    <i class="fas fa-project-diagram text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">Projetos de Desenvolvimento de Sistemas</h3>
-                    <p>Gestão de projetos de software.</p>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="images/profile.jpg" alt="Foto profissional de Darlan" class="profile-photo">
+                <div class="hero-text">
+                    <h2>Bem-vindo ao meu site</h2>
+                    <p>Sou Darlan, professor de Ciência da Computação com expertise em Inteligência Artificial, Robótica e mais. Apaixonado por tecnologia e ensino.</p>
+                    <a href="projects.html" class="cta">Explore Meus Projetos</a>
+                    <a href="contact.html" class="cta">Entre em Contato</a>
                 </div>
             </div>
+        </section>
+        <section class="expertise">
+            <div class="container">
+                <h2>Áreas de Expertise</h2>
+                <div class="cards">
+                    <div class="card"><h3>Inteligência Artificial</h3><p>Modelos de IA e aprendizado de máquina.</p></div>
+                    <div class="card"><h3>Robótica</h3><p>Desenvolvimento de robôs autônomos.</p></div>
+                    <!-- Adicione mais cards conforme necessário -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Darlan. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="https://linkedin.com">LinkedIn</a></li>
+                <li><a href="https://github.com">GitHub</a></li>
+            </ul>
         </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4 fade-in">
-            <h2 class="text-3xl font-bold mb-8 text-center">Projetos e Publicações</h2>
-            <div class="flex justify-center mb-6">
-                <select class="p-2 border rounded">
-                    <option>Filtrar por Área</option>
-                    <option>Inteligência Artificial</option>
-                    <option>Robótica</option>
-                    <!-- Add more -->
-                </select>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
-                    <img src="https://via.placeholder.com/300x200?text=Projeto+1" alt="Projeto 1" class="mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Projeto de IA</h3>
-                    <p>Descrição breve do projeto.</p>
-                    <a href="#" class="text-blue-600 hover:underline">Ver mais</a>
-                </div>
-                <!-- Add more cards -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Materials -->
-    <section id="materials" class="py-20 bg-white">
-        <div class="container mx-auto px-4 fade-in">
-            <h2 class="text-3xl font-bold mb-8 text-center">Aulas e Materiais Didáticos</h2>
-            <div class="accordion">
-                <div class="mb-4">
-                    <button class="w-full bg-blue-100 p-4 text-left font-semibold">Ensino Médio Técnico</button>
-                    <div class="hidden p-4">
-                        <ul>
-                            <li><a href="#" class="text-blue-600">Slides de IA</a></li>
-                            <!-- More -->
-                        </ul>
-                    </div>
-                </div>
-                <!-- Add more levels -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4 fade-in">
-            <h2 class="text-3xl font-bold mb-8 text-center">Contato e Redes</h2>
-            <form class="max-w-md mx-auto mb-8">
-                <input type="text" placeholder="Nome" class="w-full p-2 mb-4 border rounded">
-                <input type="email" placeholder="E-mail" class="w-full p-2 mb-4 border rounded">
-                <textarea placeholder="Mensagem" class="w-full p-2 mb-4 border rounded"></textarea>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Enviar</button>
-            </form>
-            <div class="text-center space-x-4">
-                <a href="#" class="text-blue-600"><i class="fas fa-envelope text-2xl"></i></a>
-                <a href="#" class="text-blue-600"><i class="fab fa-linkedin text-2xl"></i></a>
-                <a href="#" class="text-blue-600"><i class="fab fa-github text-2xl"></i></a>
-                <a href="#" class="text-blue-600"><i class="fas fa-book text-2xl"></i> Lattes</a>
-                <a href="#" class="text-blue-600"><i class="fab fa-youtube text-2xl"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-blue-800 text-white py-4 text-center">
-        <p>&copy; 2025 Darlan Alves Cardoso. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        // Simple accordion for materials
-        document.querySelectorAll('.accordion button').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                content.classList.toggle('hidden');
-            });
-        });
-    </script>
 </body>
 </html>
