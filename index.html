@@ -1,69 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site profissional de Darlan Alves Cardoso, Formação em Licenciatura Plena em Computação com vastos conhecimentos em IA, Robótica e mais.">
-    <meta name="keywords" content="Licenciatura Plena em Computação, IA, robótica, ensino, pesquisa">
-    <title>Darlan Alves Cardoso - Professor de Computação</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <script src="js/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prof. Darlan Alves Cardoso | Informática & IA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      content: [],
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1' // indigo-500
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-bg { background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/201/1920/1080'); }
+    .card-hover { transition: all 0.3s; }
+    .card-hover:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(99 102 241 / 0.3); }
+  </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Darlan</h1>
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Sobre Mim</a></li>
-                    <li><a href="teaching.html">Ensino</a></li>
-                    <li><a href="research.html">Pesquisa</a></li>
-                    <li><a href="projects.html">Projetos</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contato</a></li>
-                </ul>
-                <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
-            </nav>
+<body class="bg-zinc-950 text-zinc-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-zinc-900/90 backdrop-blur-md border-b border-zinc-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-robot text-4xl text-indigo-500"></i>
+        <div>
+          <span class="text-2xl font-bold tracking-tighter">Prof. Darlan</span>
+          <span class="block text-xs text-zinc-400 -mt-1">Alves Cardoso</span>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <img src="images/profile.jpg" alt="Foto profissional de Darlan" class="profile-photo">
-                <div class="hero-text">
-                    <h2>Bem-vindo ao meu site</h2>
-                    <p>Sou Darlan, professor de Ciência da Computação com expertise em Inteligência Artificial, Robótica e mais. Apaixonado por tecnologia e ensino.</p>
-                    <a href="projects.html" class="cta">Explore Meus Projetos</a>
-                    <a href="contact.html" class="cta">Entre em Contato</a>
-                </div>
-            </div>
-        </section>
-        <section class="expertise">
-            <div class="container">
-                <h2>Áreas de Expertise</h2>
-                <div class="cards">
-                    <div class="card"><h3>Inteligência Artificial</h3><p>Modelos de IA e aprendizado de máquina.</p></div>
-                    <div class="card"><h3>Robótica</h3><p>Desenvolvimento de robôs autônomos.</p></div>
-                    <!-- Adicione mais cards conforme necessário -->
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Darlan. Todos os direitos reservados.</p>
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/share/1C4vCRGx1U/">Facebook</a></li>
-                <li><a href="https://www.instagram.com/darlanphb?igsh=MW90cTRrbmUzbWFvMg==">instagram</a></li>
-                <li><a href="www.linkedin.com/in/darlan-cardoso-a0a7a72b">LinkedIn</a></li>
-                <li><a href="https://darlanphb.github.io/">GitHub</a></li>
-                <li><a href="https://lattes.cnpq.br/8749736800564401">lattes</a></li>
-            </ul>
+      </div>
+      
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#inicio" class="hover:text-indigo-400 transition">Início</a>
+        <a href="#sobre" class="hover:text-indigo-400 transition">Sobre</a>
+        <a href="#cursos" class="hover:text-indigo-400 transition">Cursos</a>
+        <a href="#tutoriais" class="hover:text-indigo-400 transition">Tutoriais</a>
+        <a href="#blog" class="hover:text-indigo-400 transition">Blog</a>
+        <a href="#contato" class="hover:text-indigo-400 transition">Contato</a>
+      </div>
+      
+      <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-4">
+      <div class="flex flex-col px-6 gap-4 text-sm font-medium">
+        <a href="#inicio" onclick="toggleMobileMenu()" class="py-2">Início</a>
+        <a href="#sobre" onclick="toggleMobileMenu()" class="py-2">Sobre</a>
+        <a href="#cursos" onclick="toggleMobileMenu()" class="py-2">Cursos</a>
+        <a href="#tutoriais" onclick="toggleMobileMenu()" class="py-2">Tutoriais</a>
+        <a href="#blog" onclick="toggleMobileMenu()" class="py-2">Blog</a>
+        <a href="#contato" onclick="toggleMobileMenu()" class="py-2">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero-bg bg-cover bg-center min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="inline-block bg-indigo-600/20 text-indigo-400 text-sm font-medium px-6 py-2 rounded-full mb-6">Especialista em IA • Robótica • Linux</p>
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight max-w-4xl mx-auto">
+        Educação em Informática e Inteligência Artificial que transforma vidas
+      </h1>
+      <p class="mt-8 text-xl text-zinc-300 max-w-2xl mx-auto">
+        Professor no CETI Zulmira Xavier • Diretor de Informática • Mestre em IA<br>
+        Aulas práticas para Ensino Médio e profissionais.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#cursos" class="bg-indigo-600 hover:bg-indigo-500 px-10 py-5 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 transition">
+          Ver Cursos <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#sobre" class="border border-zinc-400 hover:bg-white/10 px-10 py-5 rounded-2xl font-semibold text-lg transition">
+          Conhecer o Professor
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <img src="https://picsum.photos/id/64/800/800" alt="Prof. Darlan Alves Cardoso" class="rounded-3xl shadow-2xl w-full">
+      </div>
+      <div>
+        <h2 class="text-5xl font-bold">Olá, sou o Prof. Darlan Alves Cardoso</h2>
+        <p class="mt-8 text-lg text-zinc-300 leading-relaxed">
+          Professor de Informática no <strong>CETI Zulmira Xavier</strong>, Diretor de Departamento de Informática em prefeituras de Parnaíba/PI e eterno aprendiz de tecnologias open-source.
+        </p>
+        <p class="mt-6 text-zinc-300">
+          Mestre em IA, apaixonado por robótica com Arduino, SQL, Linux (Gentoo/Debian), Ollama e ensino prático. Minha missão é tornar a tecnologia acessível, criativa e divertida para alunos do Ensino Médio e profissionais.
+        </p>
+        
+        <div class="grid grid-cols-3 gap-8 mt-12">
+          <div class="text-center">
+            <span class="block text-5xl font-bold text-emerald-400">15+</span>
+            <span class="text-sm text-zinc-400">Anos de experiência</span>
+          </div>
+          <div class="text-center">
+            <span class="block text-5xl font-bold text-emerald-400">500+</span>
+            <span class="text-sm text-zinc-400">Alunos formados</span>
+          </div>
+          <div class="text-center">
+            <span class="block text-5xl font-bold text-emerald-400">100%</span>
+            <span class="text-sm text-zinc-400">Aulas práticas</span>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursos -->
+  <section id="cursos" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-4">Cursos e Aulas</h2>
+      <p class="text-center text-zinc-400 max-w-md mx-auto">Escolha o caminho que vai transformar sua carreira ou seus alunos</p>
+      
+      <div class="grid md:grid-cols-3 gap-8 mt-16">
+        <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+          <i class="fa-solid fa-brain text-5xl text-indigo-400 mb-6"></i>
+          <h3 class="text-2xl font-semibold">Inteligência Artificial para Iniciantes</h3>
+          <p class="mt-4 text-zinc-300">ChatGPT, Ollama, prompts avançados e ética em IA</p>
+          <span class="inline-block mt-6 text-xs bg-indigo-900 text-indigo-300 px-4 py-2 rounded-full">Ensino Médio + Profissionais</span>
+        </div>
+        
+        <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+          <i class="fa-solid fa-microchip text-5xl text-indigo-400 mb-6"></i>
+          <h3 class="text-2xl font-semibold">Robótica com Arduino</h3>
+          <p class="mt-4 text-zinc-300">Eletrônica, programação de microcontroladores e projetos reais</p>
+          <span class="inline-block mt-6 text-xs bg-indigo-900 text-indigo-300 px-4 py-2 rounded-full">Ensino Médio</span>
+        </div>
+        
+        <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+          <i class="fa-solid fa-database text-5xl text-indigo-400 mb-6"></i>
+          <h3 class="text-2xl font-semibold">SQL e Banco de Dados</h3>
+          <p class="mt-4 text-zinc-300">MySQL do básico ao avançado com projetos práticos</p>
+          <span class="inline-block mt-6 text-xs bg-indigo-900 text-indigo-300 px-4 py-2 rounded-full">Ensino Médio + Profissionais</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutoriais com códigos -->
+  <section id="tutoriais" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Tutoriais Passo a Passo com Código</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Tutorial 1 -->
+        <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover">
+          <div class="h-2 bg-gradient-to-r from-indigo-500 to-emerald-400"></div>
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold">Hello World em Python + Variáveis</h3>
+            <pre class="bg-black text-emerald-400 p-6 rounded-2xl mt-6 text-sm overflow-x-auto"><code>print("Olá, eu sou aluno do Prof. Darlan!")
+nome = "Darlan Alves Cardoso"
+print(f"Bem-vindo, {nome}!")</code></pre>
+            <a href="#" class="mt-8 inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium">Ver tutorial completo →</a>
+          </div>
+        </div>
+        
+        <!-- Tutorial 2 -->
+        <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover">
+          <div class="h-2 bg-gradient-to-r from-indigo-500 to-emerald-400"></div>
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold">Blink LED com Arduino</h3>
+            <pre class="bg-black text-emerald-400 p-6 rounded-2xl mt-6 text-sm overflow-x-auto"><code>void setup() {
+  pinMode(13, OUTPUT);
+}
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}</code></pre>
+            <a href="#" class="mt-8 inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium">Ver tutorial completo →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center">Blog &amp; Dicas</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-16">
+        <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+          <span class="text-xs text-zinc-400">23 FEV 2026</span>
+          <h3 class="text-xl font-semibold mt-4">Como instalar Ollama + Open WebUI no Gentoo/Linux</h3>
+          <p class="mt-4 text-zinc-300 line-clamp-3">Tutorial completo que eu mesmo uso em produção...</p>
+        </div>
+        <!-- mais dois cards semelhantes -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-24 bg-zinc-900">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center">Vamos conversar?</h2>
+      <form action="https://formspree.io/f/seu-id-aqui" method="POST" class="mt-12 space-y-8">
+        <input type="text" name="nome" placeholder="Seu nome" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-indigo-500">
+        <input type="email" name="email" placeholder="Seu e-mail" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-indigo-500">
+        <textarea name="mensagem" rows="6" placeholder="Sua mensagem..." class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-indigo-500"></textarea>
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 py-6 rounded-2xl font-semibold text-lg transition">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-16 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 text-center text-zinc-400">
+      <p>&copy; 2026 Prof. Darlan Alves Cardoso. Todos os direitos reservados.</p>
+      <p class="mt-3 text-xs">Parnaíba/PI • Feito com ❤️ para a educação tecnológica brasileira</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
