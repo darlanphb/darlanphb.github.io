@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://darlanphb.github.io/sitemap.xml
